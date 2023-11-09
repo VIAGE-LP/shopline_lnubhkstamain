@@ -166,8 +166,7 @@
         right: 11%;
         width: 78%;
     }
-
-    .midoffer_btn1:hover {
+    .midoffer_btn1:hover{
         opacity: 0.8;
     }
 </style>
@@ -199,88 +198,6 @@
             </div>
         </div>
     </div>
-
-    <!-- 漂浮按鈕 start-->
-    <style>
-        .sizelinkbtn {
-            width: 174px;
-            position: fixed;
-            right: 0px;
-            bottom: 0px;
-            z-index: 101;
-        }
-
-        .sizelinkbtn .gotop {
-            transform: translate(-8px, 0px);
-            width: 95%;
-            height: auto;
-        }
-
-        .sizelinkbtn .copyButton2 {
-            width: 85%;
-            height: auto;
-        }
-
-        @media (max-width: 768px) {
-            .sizelinkbtn {
-                width: 35%;
-                max-width: 170px;
-            }
-
-            .sizelinkbtn .gotop {
-                transform: translate(7px, 0px);
-                width: 92%;
-                height: auto;
-            }
-
-            .sizelinkbtn .copyButton2 {
-                transform: translate(30px, 0px);
-                width: 65%;
-                height: auto;
-            }
-        }
-    </style>
-    <a id="gotop"></a>
-    <div class="sizelinkbtn" style="text-align: center">
-        <!-- <a href="#buy"> -->
-        <!-- <input class="copyText2" type="text" value="W112380B" style="display: none;">
-        <img class="copyButton2" style="cursor: pointer;"
-            src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/discount.gif"> -->
-        <img class="gotop" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1107/gotop.png">
-        <!-- <p class="people-number">200</p> -->
-    </div>
-    <script>
-        // let copyText2 = document.querySelector(".copyText2");
-        // let copyButton2 = document.querySelector(".copyButton2");
-        // copyButton2.addEventListener("click", function (e) {
-        //     //點擊按鈕後選擇文本
-        //     copyText2.select();
-        //     copyText2.setSelectionRange(0, 99999);
-        //     //將文本寫入剪貼簿
-        //     navigator.clipboard.writeText(copyText2.value);
-        //     // Alert the copied text
-        //     alert("恭喜你獲得NT$80(≈HKD$20)折扣金！\n您已複製以下優惠代碼，於購物車「優惠代碼」欄位輸入，\n即可享總結帳金額再折NT$80(≈HKD$20)\n限時優惠，把握機會。\n優惠代碼： " + copyText2.value);
-        //     if ($(window).scrollTop() > $('#sizelink').offset().top) {
-        //         e.preventDefault()
-        //     } else {
-        //         $('html , body').animate({
-        //             scrollTop: $('#sizelink').offset().top,
-        //         }, 900);
-        //     }
-        // });
-        let discount = document.querySelector(".gotop");
-        discount.addEventListener("click", function (e) {
-            if ($(window).scrollTop() > $('#sizelink').offset().top) {
-                e.preventDefault()
-            } else {
-                $('html , body').animate({
-                    scrollTop: $('#sizelink').offset().top,
-                }, 900);
-            }
-        });
-    </script>
-
-    <!-- 漂浮按鈕 end -->
     <!--手機漢堡menu-->
     <!-- <div id="hamburger">
     <header>
@@ -306,13 +223,11 @@
     </div>
   </div> -->
     <div id="LP">
-        <input class="copyText" type="text" value="23W11A100" style="display: none;">
-        <div class="copyButton">
-            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/hand.gif" alt="" class="lotteryshow"
-                style="cursor: pointer;">
-            <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/banner.gif" alt="" class="lotteryshow"
-                style="cursor: pointer;">
-        </div>
+<input class="copyText" type="text" value="23W11A100" style="display: none;">
+<div class="copyButton">
+        <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/hand.gif" alt="" class="lotteryshow" style="cursor: pointer;">
+        <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs_1010/banner.gif" alt="" class="lotteryshow" style="cursor: pointer;">
+</div>
         <!--<div class="LD">
             <span>此網頁限定</span>
             <span class="lastday" id="lastday"></span>
@@ -332,8 +247,8 @@
         <section class="bg bg_FV">
             <div class="content">
                 <img src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_front.webp" alt="">
-                <video class="FV_video" src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/FV_video_3.mp4"
-                    playsinline autoplay muted loop></video>
+                <video class="FV_video" src="https://lunanaturalbra.com/hk/cp_lnubhksta/images/FV_video_3.mp4" playsinline
+                    autoplay muted loop></video>
                 <img class="FV_gif" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_BA.gif" alt="">
                 <img class="FV_front" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_front.webp" alt="">
                 <img class="FV_light" src="https://lunanaturalbra.com/hk/lnubhk2/imgs/FV_light.webp" alt="">
@@ -2398,7 +2313,7 @@
     let getUrlString = location.href;
     let url = new URL(getUrlString);
     let url_cookie = url.search;
-    $.cookie('url_cookie', url_cookie, { expires: 1, path: '/' });
+    $.cookie('url_cookie', url_cookie , { expires: 1, path: '/' });
 </script>
 
 <script>
@@ -2408,6 +2323,19 @@
         return;
     });
 
+    // 點選下方商品列表不跳轉
+    $('a[href*="https://www.lunabrahk.com/products/"]').click(function (e) {
+        e.preventDefault();
+        return;
+    });
+
+    // 提示購物車按鈕電腦版/手機版
+    var width = $(window).width();
+    if (width <= 1000) {
+        $("div.title.text-primary-color").text("▼點擊加入購物車▼");
+    } else {
+        $("div.title.text-primary-color").text("▲點擊加入購物車▲");
+    }
     let copyText = document.querySelector(".copyText");
     let copyButton = document.querySelector(".copyButton");
     copyButton.addEventListener("click", function () {
